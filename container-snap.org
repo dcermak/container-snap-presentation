@@ -1,0 +1,104 @@
+# -*- org-confirm-babel-evaluate: nil; -*-
+#+AUTHOR: Dan Čermák
+#+DATE: February 1st, 2025
+#+EMAIL: dcermak@suse.com
+#+TITLE: =container-snap=
+#+SUBTITLE: Atomic Updates from OCI Images using Podman’s Btrfs Driver
+
+#+REVEAL_ROOT: ./node_modules/reveal.js/
+#+REVEAL_THEME: simple
+#+REVEAL_PLUGINS: (highlight notes history)
+#+OPTIONS: toc:nil
+#+REVEAL_DEFAULT_FRAG_STYLE: appear
+#+REVEAL_INIT_OPTIONS: transition: 'none', hash: true
+#+OPTIONS: num:nil toc:nil center:nil reveal_title_slide:nil
+#+REVEAL_EXTRA_CSS: ./node_modules/@fortawesome/fontawesome-free/css/all.min.css
+#+REVEAL_EXTRA_CSS: ./custom-style.css
+#+REVEAL_HIGHLIGHT_CSS: ./node_modules/reveal.js/plugin/highlight/zenburn.css
+
+#+REVEAL_TITLE_SLIDE: <h2 class="title">%t</h2>
+#+REVEAL_TITLE_SLIDE: <p class="subtitle" style="color: Gray;">%s</p>
+#+REVEAL_TITLE_SLIDE: <p class="author">%a</p>
+#+REVEAL_TITLE_SLIDE: <div style="float:left"><a href="https://fosdem.org/2025/" target="_blank"><img src="./media/FOSDEM_logo.svg" height="50px" style="margin-bottom:-12px"/> FOSDEM 2025</a></div>
+#+REVEAL_TITLE_SLIDE: <div style="float:right;font-size:35px;"><p xmlns:dct="http://purl.org/dc/terms/" xmlns:cc="http://creativecommons.org/ns#"><a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">
+#+REVEAL_TITLE_SLIDE: CC BY 4.0 <i class="fab fa-creative-commons"></i> <i class="fab fa-creative-commons-by"></i></a></p></div>
+
+* who -u
+
+Dan Čermák
+
+@@html: <div style="float:center">@@
+@@html: <table class="who-table">@@
+@@html: <tr><td><i class="fab fa-suse"></i></td><td> Software Developer @SUSE</td></tr>@@
+@@html: <tr><td><i class="fab fa-fedora"></i></td><td> i3 SIG, Package maintainer</td></tr>@@
+@@html: <tr><td><i class="far fa-heart"></i></td><td> Developer Tools, Testing and Documentation, Home Automation</td></tr>@@
+@@html: <tr></tr>@@
+@@html: <tr></tr>@@
+@@html: <tr><td><i class="fa-solid fa-globe"></i></td><td> <a href="https://dancermak.name/">https://dancermak.name</a></td></tr>@@
+@@html: <tr><td><i class="fab fa-github"></i></td><td> <a href="https://github.com/dcermak/">dcermak</a></td></tr>@@
+@@html: <tr><td><i class="fab fa-mastodon"></i></td><td> <a href="https://mastodon.social/@Defolos">@Defolos@mastodon.social</a></td></tr>@@
+@@html: </table>@@
+@@html: </div>@@
+
+
+* Atomic Updates
+
+#+begin_notes
+- updates applied as a whole or not at all
+- also called transactional-updates
+- often coupled with read-only =/=
+- many implementations, often image based or A/B upgrades
+#+end_notes
+
+#+ATTR_REVEAL: :frag appear
+Updates applied *fully* or *not at all*
+
+
+* Bootable Containers
+
+#+ATTR_REVEAL: :frag appear
+deploy an OS from OCI images
+
+#+ATTR_REVEAL: :frag appear
+But why 🤔
+
+#+ATTR_REVEAL: :frag appear
+We all know how to build a container
+
+
+* Boot from OCI Images
+
+#+ATTR_REVEAL: :frag appear
+@@html:<img src="./media/bootable-containers.svg" height="500px"/>@@
+
+
+* openSUSE's =tukit=
+
+#+begin_notes
+- atomic upgrades via btrfs snapshots
+#+end_notes
+
+#+ATTR_REVEAL: :frag appear
+@@html:<img src="./media/tukit.svg" height="500px"/>@@
+
+
+* podman's =btrfs= storage driver
+
+#+ATTR_REVEAL: :frag appear
+@@html:<img src="./media/btrfs-storage-driver.svg" height="500px"/>@@
+
+
+* =container-snap=
+
+#+ATTR_REVEAL: :frag appear
+@@html:<img src="./media/container-snap.svg" height="500px"/>@@
+
+
+* Demo
+
+
+
+* Questions?
+
+#+ATTR_REVEAL: :frag (appear)
+Answers!

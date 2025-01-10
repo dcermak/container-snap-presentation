@@ -1,0 +1,11 @@
+{
+  "name": "container-snap-presentation",
+  "version": "0.0.1",
+  "description": "Slides for the presentation container-snap: Atomic Updates from OCI Images using Podman’s Btrfs Driver",
+  "author": "Dan Čermák <dcermak@suse.com>",
+  "license": "CC-BY-SA-4.0",
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^6.7.2",
+    "reveal.js": "^5.1.0"
+  }
+}
