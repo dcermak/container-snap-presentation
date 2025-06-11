@@ -44,7 +44,8 @@ Dan Čermák
 * Atomic Updates
 
 #+begin_notes
-- updates applied as a whole or not at all
+- updates applied as a whole or not at all \rightarrow prevents breakage at inconvenient
+  times
 - also called transactional-updates
 - often coupled with read-only =/=
 - many implementations, often image based or A/B upgrades
@@ -55,6 +56,14 @@ Updates applied *fully* or *not at all*
 
 
 * Bootable Containers
+
+#+begin_notes
+why care?
+- do you know how to build a qcow2 image of the top of your head?
+- but you can build a container image
+
+- also *distribution infrastructure* (registries) is in place!
+#+end_notes
 
 #+ATTR_REVEAL: :frag appear
 deploy an OS from OCI images
@@ -76,6 +85,9 @@ We all know how to build a container
 
 #+begin_notes
 - atomic upgrades via btrfs snapshots
+- new snapshot: create btrfs snapshot of root subvolume, run operations in there
+- if update fails, snapshot trashed
+- used by =transactional-update= on openSUSE MicroOS/SLE Micro/Aeon/Kalpa/etc.
 #+end_notes
 
 #+ATTR_REVEAL: :frag appear
@@ -84,11 +96,27 @@ We all know how to build a container
 
 * podman's =btrfs= storage driver
 
+#+begin_notes
+- storage driver for container images
+- each image is a subvolume
+- each layer is a snapshot
+- each image is stored "plain text" on disk in a subvolume \Rightarrow switch default
+  subvolume switches =/=
+#+end_notes
+
 #+ATTR_REVEAL: :frag appear
 @@html:<img src="./media/btrfs-storage-driver.svg" height="500px"/>@@
 
 
 * =container-snap=
+
+#+begin_notes
+- combination of the previous:
+1. =container-snap= creates a custom btrfs store
+2. pull an image and let it store to subvolume
+3. switch to the subvolume
+4. profit $$$
+#+end_notes
 
 #+ATTR_REVEAL: :frag appear
 @@html:<img src="./media/container-snap.svg" height="500px"/>@@
