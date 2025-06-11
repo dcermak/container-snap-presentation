@@ -132,6 +132,9 @@ We all know how to build a container
 #+ATTR_REVEAL: :frag (appear)
 - actual testing & usage
 - proper =/etc/= handling (👉️ @@html:<i class="fa-brands fa-github"></i>@@ [[https://github.com/dcermak/bindicate][=dcermak/bindicate=]])
+- better UX
+- proper kernel update handling
+- image builder support
 - finish support in =tukit=
 
 #+ATTR_REVEAL: :frag appear
