@@ -39,8 +39,8 @@
 CC BY 4.0 <i class="fab fa-creative-commons"></i> <i class="fab fa-creative-commons-by"></i></a></p></div>
 </section>
 <section>
-<section id="slide-org4c277a3">
-<h2 id="org4c277a3">who -u</h2>
+<section id="slide-org6bc7e8a">
+<h2 id="org6bc7e8a">who -u</h2>
 <p>
 Dan Čermák
 </p>
@@ -62,8 +62,8 @@ Dan Čermák
 </section>
 </section>
 <section>
-<section id="slide-org0bc7c0e">
-<h2 id="org0bc7c0e">Atomic Updates</h2>
+<section id="slide-orga699388">
+<h2 id="orga699388">Atomic Updates</h2>
 <aside class="notes">
 <ul>
 <li>updates applied as a whole or not at all &rarr; prevents breakage at inconvenient
@@ -82,8 +82,8 @@ Updates applied <b>fully</b> or <b>not at all</b>
 </section>
 </section>
 <section>
-<section id="slide-orgea39ed7">
-<h2 id="orgea39ed7">Bootable Containers</h2>
+<section id="slide-org4a80ef8">
+<h2 id="org4a80ef8">Bootable Containers</h2>
 <aside class="notes">
 <p>
 why care?
@@ -112,16 +112,16 @@ We all know how to build a container
 </section>
 </section>
 <section>
-<section id="slide-orgca8b77e">
-<h2 id="orgca8b77e">Boot from OCI Images</h2>
+<section id="slide-orgd31add0">
+<h2 id="orgd31add0">Boot from OCI Images</h2>
 <p class="fragment appear">
 <img src="./media/bootable-containers.svg" height="500px"/>
 </p>
 </section>
 </section>
 <section>
-<section id="slide-org595ee91">
-<h2 id="org595ee91">openSUSE's <code>tukit</code></h2>
+<section id="slide-org4de4002">
+<h2 id="org4de4002">openSUSE's <code>tukit</code></h2>
 <aside class="notes">
 <ul>
 <li>atomic upgrades via btrfs snapshots</li>
@@ -139,8 +139,8 @@ We all know how to build a container
 </section>
 </section>
 <section>
-<section id="slide-org6d84be5">
-<h2 id="org6d84be5">podman's <code>btrfs</code> storage driver</h2>
+<section id="slide-org3ffe4e9">
+<h2 id="org3ffe4e9">podman's <code>btrfs</code> storage driver</h2>
 <aside class="notes">
 <ul>
 <li>storage driver for container images</li>
@@ -159,8 +159,8 @@ subvolume switches <code>/</code></li>
 </section>
 </section>
 <section>
-<section id="slide-org1702a08">
-<h2 id="org1702a08"><code>container-snap</code></h2>
+<section id="slide-org810a7a3">
+<h2 id="org810a7a3"><code>container-snap</code></h2>
 <aside class="notes">
 <ul>
 <li>combination of the previous:</li>
@@ -179,19 +179,22 @@ subvolume switches <code>/</code></li>
 </section>
 </section>
 <section>
-<section id="slide-org334e50c">
-<h2 id="org334e50c">Demo</h2>
+<section id="slide-org7341e76">
+<h2 id="org7341e76">Demo</h2>
 <p>
 <video width="1066" height="600" controls><source src="media/demo.mp4" type="video/mp4"></video>
 </p>
 </section>
 </section>
 <section>
-<section id="slide-org7c79f45">
-<h2 id="org7c79f45">What's left?</h2>
+<section id="slide-org0afa02f">
+<h2 id="org0afa02f">What's left?</h2>
 <ul>
 <li class="fragment appear">actual testing &amp; usage</li>
 <li class="fragment appear">proper <code>/etc/</code> handling (👉️ <i class="fa-brands fa-github"></i> <a href="https://github.com/dcermak/bindicate"><code>dcermak/bindicate</code></a>)</li>
+<li class="fragment appear">better UX</li>
+<li class="fragment appear">proper kernel update handling</li>
+<li class="fragment appear">image builder support</li>
 <li class="fragment appear">finish support in <code>tukit</code></li>
 
 </ul>
