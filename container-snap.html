@@ -39,8 +39,8 @@
 CC BY 4.0 <i class="fab fa-creative-commons"></i> <i class="fab fa-creative-commons-by"></i></a></p></div>
 </section>
 <section>
-<section id="slide-orgbd02714">
-<h2 id="orgbd02714">who -u</h2>
+<section id="slide-org4c277a3">
+<h2 id="org4c277a3">who -u</h2>
 <p>
 Dan Čermák
 </p>
@@ -62,11 +62,12 @@ Dan Čermák
 </section>
 </section>
 <section>
-<section id="slide-orgdce1455">
-<h2 id="orgdce1455">Atomic Updates</h2>
+<section id="slide-org0bc7c0e">
+<h2 id="org0bc7c0e">Atomic Updates</h2>
 <aside class="notes">
 <ul>
-<li>updates applied as a whole or not at all</li>
+<li>updates applied as a whole or not at all &rarr; prevents breakage at inconvenient
+times</li>
 <li>also called transactional-updates</li>
 <li>often coupled with read-only <code>/</code></li>
 <li>many implementations, often image based or A/B upgrades</li>
@@ -81,8 +82,22 @@ Updates applied <b>fully</b> or <b>not at all</b>
 </section>
 </section>
 <section>
-<section id="slide-org89b1642">
-<h2 id="org89b1642">Bootable Containers</h2>
+<section id="slide-orgea39ed7">
+<h2 id="orgea39ed7">Bootable Containers</h2>
+<aside class="notes">
+<p>
+why care?
+</p>
+<ul>
+<li>do you know how to build a qcow2 image of the top of your head?</li>
+<li>but you can build a container image</li>
+
+<li>also <b>distribution infrastructure</b> (registries) is in place!</li>
+
+</ul>
+
+</aside>
+
 <p class="fragment appear">
 deploy an OS from OCI images
 </p>
@@ -97,19 +112,22 @@ We all know how to build a container
 </section>
 </section>
 <section>
-<section id="slide-org673f724">
-<h2 id="org673f724">Boot from OCI Images</h2>
+<section id="slide-orgca8b77e">
+<h2 id="orgca8b77e">Boot from OCI Images</h2>
 <p class="fragment appear">
 <img src="./media/bootable-containers.svg" height="500px"/>
 </p>
 </section>
 </section>
 <section>
-<section id="slide-orgea578a4">
-<h2 id="orgea578a4">openSUSE's <code>tukit</code></h2>
+<section id="slide-org595ee91">
+<h2 id="org595ee91">openSUSE's <code>tukit</code></h2>
 <aside class="notes">
 <ul>
 <li>atomic upgrades via btrfs snapshots</li>
+<li>new snapshot: create btrfs snapshot of root subvolume, run operations in there</li>
+<li>if update fails, snapshot trashed</li>
+<li>used by <code>transactional-update</code> on openSUSE MicroOS/SLE Micro/Aeon/Kalpa/etc.</li>
 
 </ul>
 
@@ -121,34 +139,69 @@ We all know how to build a container
 </section>
 </section>
 <section>
-<section id="slide-orgd343fec">
-<h2 id="orgd343fec">podman's <code>btrfs</code> storage driver</h2>
+<section id="slide-org6d84be5">
+<h2 id="org6d84be5">podman's <code>btrfs</code> storage driver</h2>
+<aside class="notes">
+<ul>
+<li>storage driver for container images</li>
+<li>each image is a subvolume</li>
+<li>each layer is a snapshot</li>
+<li>each image is stored "plain text" on disk in a subvolume &rArr; switch default
+subvolume switches <code>/</code></li>
+
+</ul>
+
+</aside>
+
 <p class="fragment appear">
 <img src="./media/btrfs-storage-driver.svg" height="500px"/>
 </p>
 </section>
 </section>
 <section>
-<section id="slide-orgaf68324">
-<h2 id="orgaf68324"><code>container-snap</code></h2>
+<section id="slide-org1702a08">
+<h2 id="org1702a08"><code>container-snap</code></h2>
+<aside class="notes">
+<ul>
+<li>combination of the previous:</li>
+<li><code>container-snap</code> creates a custom btrfs store</li>
+<li>pull an image and let it store to subvolume</li>
+<li>switch to the subvolume</li>
+<li>profit $$$</li>
+
+</ul>
+
+</aside>
+
 <p class="fragment appear">
 <img src="./media/container-snap.svg" height="500px"/>
 </p>
 </section>
 </section>
 <section>
-<section id="slide-org5b7e064">
-<h2 id="org5b7e064">Demo</h2>
+<section id="slide-org334e50c">
+<h2 id="org334e50c">Demo</h2>
 <p>
-<video width="640" height="360" controls><source src="media/demo.mp4" type="video/mp4"></video>
+<video width="1066" height="600" controls><source src="media/demo.mp4" type="video/mp4"></video>
 </p>
 </section>
 </section>
 <section>
-<section id="slide-orge199e61">
-<h2 id="orge199e61">Questions?</h2>
-<p class="fragment (appear)">
-Answers!
+<section id="slide-org7c79f45">
+<h2 id="org7c79f45">What's left?</h2>
+<ul>
+<li class="fragment appear">actual testing &amp; usage</li>
+<li class="fragment appear">proper <code>/etc/</code> handling (👉️ <i class="fa-brands fa-github"></i> <a href="https://github.com/dcermak/bindicate"><code>dcermak/bindicate</code></a>)</li>
+<li class="fragment appear">finish support in <code>tukit</code></li>
+
+</ul>
+
+<p class="fragment appear">
+Go to <i class="fa-brands fa-github"></i> <a href="https://github.com/dcermak/container-snap"><code>dcermak/container-snap</code></a> and give it a try!
+</p>
+
+<p class="fragment appear">
+<img src="./media/qr.svg" height="300px"/>
 </p>
 </section>
 </section>
