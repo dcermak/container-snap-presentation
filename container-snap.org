@@ -126,7 +126,16 @@ We all know how to build a container
 
 @@html:<video width="1066" height="600" controls><source src="media/demo.mp4" type="video/mp4"></video>@@
 
-* Questions?
+
+* What's left?
 
 #+ATTR_REVEAL: :frag (appear)
-Answers!
+- actual testing & usage
+- proper =/etc/= handling (👉️ @@html:<i class="fa-brands fa-github"></i>@@ [[https://github.com/dcermak/bindicate][=dcermak/bindicate=]])
+- finish support in =tukit=
+
+#+ATTR_REVEAL: :frag appear
+@@html:Go to <i class="fa-brands fa-github"></i> <a href="https://github.com/dcermak/container-snap"><code>dcermak/container-snap</code></a> and give it a try!@@
+
+#+ATTR_REVEAL: :frag appear
+@@html:<img src="./media/qr.svg" height="300px"/>@@
