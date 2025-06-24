@@ -1,6 +1,6 @@
 # -*- org-confirm-babel-evaluate: nil; -*-
 #+AUTHOR: Dan Čermák
-#+DATE: June 12, 2025
+#+DATE: June 26, 2025
 #+EMAIL: dcermak@suse.com
 #+TITLE: =container-snap=
 #+SUBTITLE: Atomic Updates from OCI Images using Podman’s Btrfs Driver
@@ -19,7 +19,7 @@
 #+REVEAL_TITLE_SLIDE: <h2 class="title">%t</h2>
 #+REVEAL_TITLE_SLIDE: <p class="subtitle" style="color: Gray;">%s</p>
 #+REVEAL_TITLE_SLIDE: <p class="author">%a</p>
-#+REVEAL_TITLE_SLIDE: <div style="float:left"><a href="https://www.devconf.info/cz/" target="_blank"><img src="./media/devconf-cz-bw.svg" height="50px"/></a></div>
+#+REVEAL_TITLE_SLIDE: <div style="float:left"><a href="https://events.opensuse.org/conferences/oSC25" target="_blank"><img src="./media/oSCon2025Logo.svg" height="125px"/></a></div>
 #+REVEAL_TITLE_SLIDE: <div style="float:right;font-size:35px;"><p xmlns:dct="http://purl.org/dc/terms/" xmlns:cc="http://creativecommons.org/ns#"><a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">
 #+REVEAL_TITLE_SLIDE: CC BY 4.0 <i class="fab fa-creative-commons"></i> <i class="fab fa-creative-commons-by"></i></a></p></div>
 
@@ -134,11 +134,11 @@ We all know how to build a container
 - proper =/etc/= handling (👉️ @@html:<i class="fa-brands fa-github"></i>@@ [[https://github.com/dcermak/bindicate][=dcermak/bindicate=]])
 - better UX
 - proper kernel update handling
-- image builder support
+- image builder support (👉️ @@html:<i class="fa-brands fa-github"></i>@@ [[https://github.com/OSInside/kiwi/pull/2840][=OSInside/kiwi#2840=]])
 - finish support in =tukit=
 
 #+ATTR_REVEAL: :frag appear
 @@html:Go to <i class="fa-brands fa-github"></i> <a href="https://github.com/dcermak/container-snap"><code>dcermak/container-snap</code></a> and give it a try!@@
 
 #+ATTR_REVEAL: :frag appear
-@@html:<img src="./media/qr.svg" height="300px"/>@@
+@@html:<img src="./media/qr.svg" height="200px"/>@@
