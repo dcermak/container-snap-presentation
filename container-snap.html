@@ -34,13 +34,13 @@
 <section id="sec-title-slide"><h2 class="title"><code>container-snap</code></h2>
 <p class="subtitle" style="color: Gray;">Atomic Updates from OCI Images using Podman’s Btrfs Driver</p>
 <p class="author">Dan Čermák</p>
-<div style="float:left"><a href="https://events.opensuse.org/conferences/oSC25" target="_blank"><img src="./media/osc_conference_logo.png" height="125px"/></a></div>
+<div style="float:left"><a href="https://events.opensuse.org/conferences/oSC25" target="_blank"><img src="./media/oSCon2025Logo.svg" height="125px"/></a></div>
 <div style="float:right;font-size:35px;"><p xmlns:dct="http://purl.org/dc/terms/" xmlns:cc="http://creativecommons.org/ns#"><a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">
 CC BY 4.0 <i class="fab fa-creative-commons"></i> <i class="fab fa-creative-commons-by"></i></a></p></div>
 </section>
 <section>
-<section id="slide-orga46503e">
-<h2 id="orga46503e">who -u</h2>
+<section id="slide-orgc39525b">
+<h2 id="orgc39525b">who -u</h2>
 <p>
 Dan Čermák
 </p>
@@ -62,8 +62,8 @@ Dan Čermák
 </section>
 </section>
 <section>
-<section id="slide-orga4e25e7">
-<h2 id="orga4e25e7">Atomic Updates</h2>
+<section id="slide-org4688189">
+<h2 id="org4688189">Atomic Updates</h2>
 <aside class="notes">
 <ul>
 <li>updates applied as a whole or not at all &rarr; prevents breakage at inconvenient
@@ -82,8 +82,8 @@ Updates applied <b>fully</b> or <b>not at all</b>
 </section>
 </section>
 <section>
-<section id="slide-orgb5e4fca">
-<h2 id="orgb5e4fca">Bootable Containers</h2>
+<section id="slide-org64decaf">
+<h2 id="org64decaf">Bootable Containers</h2>
 <aside class="notes">
 <p>
 why care?
@@ -112,16 +112,16 @@ We all know how to build a container
 </section>
 </section>
 <section>
-<section id="slide-org778f3e9">
-<h2 id="org778f3e9">Boot from OCI Images</h2>
+<section id="slide-org88aff5f">
+<h2 id="org88aff5f">Boot from OCI Images</h2>
 <p class="fragment appear">
 <img src="./media/bootable-containers.svg" height="500px"/>
 </p>
 </section>
 </section>
 <section>
-<section id="slide-orgab96d94">
-<h2 id="orgab96d94">openSUSE's <code>tukit</code></h2>
+<section id="slide-org7c8cd5f">
+<h2 id="org7c8cd5f">openSUSE's <code>tukit</code></h2>
 <aside class="notes">
 <ul>
 <li>atomic upgrades via btrfs snapshots</li>
@@ -139,8 +139,8 @@ We all know how to build a container
 </section>
 </section>
 <section>
-<section id="slide-org81032d4">
-<h2 id="org81032d4">podman's <code>btrfs</code> storage driver</h2>
+<section id="slide-org22904ed">
+<h2 id="org22904ed">podman's <code>btrfs</code> storage driver</h2>
 <aside class="notes">
 <ul>
 <li>storage driver for container images</li>
@@ -159,8 +159,8 @@ subvolume switches <code>/</code></li>
 </section>
 </section>
 <section>
-<section id="slide-org51f95b8">
-<h2 id="org51f95b8"><code>container-snap</code></h2>
+<section id="slide-orgd879930">
+<h2 id="orgd879930"><code>container-snap</code></h2>
 <aside class="notes">
 <ul>
 <li>combination of the previous:</li>
@@ -179,22 +179,22 @@ subvolume switches <code>/</code></li>
 </section>
 </section>
 <section>
-<section id="slide-org051fd7c">
-<h2 id="org051fd7c">Demo</h2>
+<section id="slide-orgdde0a4a">
+<h2 id="orgdde0a4a">Demo</h2>
 <p>
 <video width="1066" height="600" controls><source src="media/demo.mp4" type="video/mp4"></video>
 </p>
 </section>
 </section>
 <section>
-<section id="slide-org15af490">
-<h2 id="org15af490">What's left?</h2>
+<section id="slide-orgf60f28a">
+<h2 id="orgf60f28a">What's left?</h2>
 <ul>
 <li class="fragment appear">actual testing &amp; usage</li>
 <li class="fragment appear">proper <code>/etc/</code> handling (👉️ <i class="fa-brands fa-github"></i> <a href="https://github.com/dcermak/bindicate"><code>dcermak/bindicate</code></a>)</li>
 <li class="fragment appear">better UX</li>
 <li class="fragment appear">proper kernel update handling</li>
-<li class="fragment appear">image builder support</li>
+<li class="fragment appear">image builder support (👉️ <i class="fa-brands fa-github"></i> <a href="https://github.com/OSInside/kiwi/pull/2840"><code>OSInside/kiwi#2840</code></a>)</li>
 <li class="fragment appear">finish support in <code>tukit</code></li>
 
 </ul>
@@ -204,7 +204,7 @@ Go to <i class="fa-brands fa-github"></i> <a href="https://github.com/dcermak/co
 </p>
 
 <p class="fragment appear">
-<img src="./media/qr.svg" height="300px"/>
+<img src="./media/qr.svg" height="200px"/>
 </p>
 </section>
 </section>
