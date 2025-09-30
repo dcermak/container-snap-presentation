@@ -124,7 +124,7 @@ We all know how to build a container
 
 * Demo
 
-@@html:<video width="1066" height="600" controls><source src="media/demo.mp4" type="video/mp4"></video>@@
+@@html:<video width="1066" height="600" controls><source src="media/container-snap-demo.mp4" type="video/mp4"></video>@@
 
 
 * What's left?
