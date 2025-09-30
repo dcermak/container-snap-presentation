@@ -34,13 +34,13 @@
 <section id="sec-title-slide"><h2 class="title"><code>container-snap</code></h2>
 <p class="subtitle" style="color: Gray;">Atomic Updates from OCI Images using Podman’s Btrfs Driver</p>
 <p class="author">Dan Čermák</p>
-<div style="float:left"><a href="https://events.opensuse.org/conferences/oSC25" target="_blank"><img src="./media/oSCon2025Logo.svg" height="125px"/></a></div>
+<div style="float:left"><a href="https://events.opensuse.org/conferences/oSC25" target="_blank"><img src="./media/all-systems-go-logo.svg" height="80px"/></a></div>
 <div style="float:right;font-size:35px;"><p xmlns:dct="http://purl.org/dc/terms/" xmlns:cc="http://creativecommons.org/ns#"><a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">
 CC BY 4.0 <i class="fab fa-creative-commons"></i> <i class="fab fa-creative-commons-by"></i></a></p></div>
 </section>
 <section>
-<section id="slide-org3092fbf">
-<h2 id="org3092fbf">who -u</h2>
+<section id="slide-org828e449">
+<h2 id="org828e449">who -u</h2>
 <p>
 Dan Čermák
 </p>
@@ -62,8 +62,8 @@ Dan Čermák
 </section>
 </section>
 <section>
-<section id="slide-org38c66ef">
-<h2 id="org38c66ef">Atomic Updates</h2>
+<section id="slide-orgccf1fde">
+<h2 id="orgccf1fde">Atomic Updates</h2>
 <aside class="notes">
 <ul>
 <li>updates applied as a whole or not at all &rarr; prevents breakage at inconvenient
@@ -82,8 +82,8 @@ Updates applied <b>fully</b> or <b>not at all</b>
 </section>
 </section>
 <section>
-<section id="slide-org2531adf">
-<h2 id="org2531adf">Bootable Containers</h2>
+<section id="slide-org318b79a">
+<h2 id="org318b79a">Bootable Containers</h2>
 <aside class="notes">
 <p>
 why care?
@@ -112,16 +112,16 @@ We all know how to build a container
 </section>
 </section>
 <section>
-<section id="slide-org5eed46e">
-<h2 id="org5eed46e">Boot from OCI Images</h2>
+<section id="slide-orge698f1a">
+<h2 id="orge698f1a">Boot from OCI Images</h2>
 <p class="fragment appear">
 <img src="./media/bootable-containers.svg" height="500px"/>
 </p>
 </section>
 </section>
 <section>
-<section id="slide-orgdb406b7">
-<h2 id="orgdb406b7">openSUSE's <code>tukit</code></h2>
+<section id="slide-org554a12f">
+<h2 id="org554a12f">openSUSE's <code>tukit</code></h2>
 <aside class="notes">
 <ul>
 <li>atomic upgrades via btrfs snapshots</li>
@@ -139,8 +139,8 @@ We all know how to build a container
 </section>
 </section>
 <section>
-<section id="slide-orga14bcce">
-<h2 id="orga14bcce">podman's <code>btrfs</code> storage driver</h2>
+<section id="slide-org91e48aa">
+<h2 id="org91e48aa">podman's <code>btrfs</code> storage driver</h2>
 <aside class="notes">
 <ul>
 <li>storage driver for container images</li>
@@ -159,8 +159,8 @@ subvolume switches <code>/</code></li>
 </section>
 </section>
 <section>
-<section id="slide-org1147012">
-<h2 id="org1147012"><code>container-snap</code></h2>
+<section id="slide-org169e9a1">
+<h2 id="org169e9a1"><code>container-snap</code></h2>
 <aside class="notes">
 <ul>
 <li>combination of the previous:</li>
@@ -179,16 +179,16 @@ subvolume switches <code>/</code></li>
 </section>
 </section>
 <section>
-<section id="slide-orgaecefdd">
-<h2 id="orgaecefdd">Demo</h2>
+<section id="slide-orgd4c7c26">
+<h2 id="orgd4c7c26">Demo</h2>
 <p>
-<video width="1066" height="600" controls><source src="media/demo.mp4" type="video/mp4"></video>
+<video width="1066" height="600" controls><source src="media/container-snap-demo.mp4" type="video/mp4"></video>
 </p>
 </section>
 </section>
 <section>
-<section id="slide-orgaf97d3c">
-<h2 id="orgaf97d3c">What's left?</h2>
+<section id="slide-org9679857">
+<h2 id="org9679857">What's left?</h2>
 <ul>
 <li class="fragment appear">actual testing &amp; usage</li>
 <li class="fragment appear">proper <code>/etc/</code> handling (👉️ <i class="fa-brands fa-github"></i> <a href="https://github.com/dcermak/bindicate"><code>dcermak/bindicate</code></a>)</li>
