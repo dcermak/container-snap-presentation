@@ -149,12 +149,13 @@ We all know how to build a container
 - actual testing & usage
 - proper =/etc/= handling (👉️ @@html:<i class="fa-brands fa-github"></i>@@ [[https://github.com/dcermak/bindicate][=dcermak/bindicate=]])
 - better UX
-- proper kernel update handling
-- image builder support (👉️ @@html:<i class="fa-brands fa-github"></i>@@ [[https://github.com/OSInside/kiwi/pull/2840][=OSInside/kiwi#2840=]])
+- proper kernel & bootloader update handling
+- real image builder support
 - finish support in =tukit=
+- garbage collection
 
 #+ATTR_REVEAL: :frag appear
 @@html:Go to <i class="fa-brands fa-github"></i> <a href="https://github.com/dcermak/container-snap"><code>dcermak/container-snap</code></a> and give it a try!@@
 
 #+ATTR_REVEAL: :frag appear
-@@html:<img src="./media/qr.svg" height="200px"/>@@
+@@html:<img src="./media/qr.svg" height="150px"/>@@
