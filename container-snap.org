@@ -63,6 +63,8 @@ why care?
 - but you can build a container image
 
 - also *distribution infrastructure* (registries) is in place!
+
+- catch: OCI image format not well suited for disk images
 #+end_notes
 
 #+ATTR_REVEAL: :frag appear
