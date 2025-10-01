@@ -34,13 +34,13 @@
 <section id="sec-title-slide"><h2 class="title"><code>container-snap</code></h2>
 <p class="subtitle" style="color: Gray;">Atomic Updates from OCI Images using Podman’s Btrfs Driver</p>
 <p class="author">Dan Čermák</p>
-<div style="float:left"><a href="https://events.opensuse.org/conferences/oSC25" target="_blank"><img src="./media/all-systems-go-logo.svg" height="80px"/></a></div>
+<div style="float:left"><a href="https://all-systems-go.io/" target="_blank"><img src="./media/all-systems-go-logo.svg" height="80px"/></a></div>
 <div style="float:right;font-size:35px;"><p xmlns:dct="http://purl.org/dc/terms/" xmlns:cc="http://creativecommons.org/ns#"><a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">
 CC BY 4.0 <i class="fab fa-creative-commons"></i> <i class="fab fa-creative-commons-by"></i></a></p></div>
 </section>
 <section>
-<section id="slide-org828e449">
-<h2 id="org828e449">who -u</h2>
+<section id="slide-org2c27af2">
+<h2 id="org2c27af2">who -u</h2>
 <p>
 Dan Čermák
 </p>
@@ -48,7 +48,7 @@ Dan Čermák
 <p>
  <div style="float:center">
  <table class="who-table">
- <tr><td><i class="fab fa-suse"></i></td><td> Software Developer @SUSE</td></tr>
+ <tr><td><i class="fab fa-suse"></i></td><td> Fullstack Developer @SUSE</td></tr>
  <tr><td><i class="fab fa-fedora"></i></td><td> i3 SIG, Package maintainer</td></tr>
  <tr><td><i class="far fa-heart"></i></td><td> Developer Tools, Testing and Documentation, Home Automation</td></tr>
  <tr></tr>
@@ -62,8 +62,8 @@ Dan Čermák
 </section>
 </section>
 <section>
-<section id="slide-orgccf1fde">
-<h2 id="orgccf1fde">Atomic Updates</h2>
+<section id="slide-orgf7a05ef">
+<h2 id="orgf7a05ef">Atomic Updates</h2>
 <aside class="notes">
 <ul>
 <li>updates applied as a whole or not at all &rarr; prevents breakage at inconvenient
@@ -82,8 +82,8 @@ Updates applied <b>fully</b> or <b>not at all</b>
 </section>
 </section>
 <section>
-<section id="slide-org318b79a">
-<h2 id="org318b79a">Bootable Containers</h2>
+<section id="slide-org5c757a5">
+<h2 id="org5c757a5">Bootable Containers</h2>
 <aside class="notes">
 <p>
 why care?
@@ -93,6 +93,8 @@ why care?
 <li>but you can build a container image</li>
 
 <li>also <b>distribution infrastructure</b> (registries) is in place!</li>
+
+<li>catch: OCI image format not well suited for disk images</li>
 
 </ul>
 
@@ -112,16 +114,16 @@ We all know how to build a container
 </section>
 </section>
 <section>
-<section id="slide-orge698f1a">
-<h2 id="orge698f1a">Boot from OCI Images</h2>
+<section id="slide-orgadea4b4">
+<h2 id="orgadea4b4">Boot from OCI Images</h2>
 <p class="fragment appear">
 <img src="./media/bootable-containers.svg" height="500px"/>
 </p>
 </section>
 </section>
 <section>
-<section id="slide-org554a12f">
-<h2 id="org554a12f">openSUSE's <code>tukit</code></h2>
+<section id="slide-org918a9c8">
+<h2 id="org918a9c8">openSUSE's <code>tukit</code></h2>
 <aside class="notes">
 <ul>
 <li>atomic upgrades via btrfs snapshots</li>
@@ -139,8 +141,8 @@ We all know how to build a container
 </section>
 </section>
 <section>
-<section id="slide-org91e48aa">
-<h2 id="org91e48aa">podman's <code>btrfs</code> storage driver</h2>
+<section id="slide-orgaf11489">
+<h2 id="orgaf11489">podman's <code>btrfs</code> storage driver</h2>
 <aside class="notes">
 <ul>
 <li>storage driver for container images</li>
@@ -159,8 +161,8 @@ subvolume switches <code>/</code></li>
 </section>
 </section>
 <section>
-<section id="slide-org169e9a1">
-<h2 id="org169e9a1"><code>container-snap</code></h2>
+<section id="slide-orgc9cc61b">
+<h2 id="orgc9cc61b"><code>container-snap</code></h2>
 <aside class="notes">
 <ul>
 <li>combination of the previous:</li>
@@ -179,23 +181,47 @@ subvolume switches <code>/</code></li>
 </section>
 </section>
 <section>
-<section id="slide-orgd4c7c26">
-<h2 id="orgd4c7c26">Demo</h2>
+<section id="slide-orgbc1df99">
+<h2 id="orgbc1df99">Demo</h2>
 <p>
 <video width="1066" height="600" controls><source src="media/container-snap-demo.mp4" type="video/mp4"></video>
 </p>
 </section>
 </section>
 <section>
-<section id="slide-org9679857">
-<h2 id="org9679857">What's left?</h2>
+<section id="slide-orga78b3db">
+<h2 id="orga78b3db">Challenges</h2>
+<p class="fragment (appear)">
+<img src="./media/oops1.png"/>
+</p>
+
+<p class="fragment (appear)">
+<img src="./media/oops2.png"/>
+</p>
+
+<p class="fragment (appear)">
+<img src="./media/oops3.png"/>
+</p>
+
+<ul>
+<li class="fragment appear">long debug &amp; test cycles</li>
+<li class="fragment appear"><code>tukit</code> is very <a href="https://github.com/openSUSE/snapper/">snapper</a> &amp; openSUSE specific</li>
+<li class="fragment appear">bootloaders are weird</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orge468248">
+<h2 id="orge468248">What's left?</h2>
 <ul>
 <li class="fragment appear">actual testing &amp; usage</li>
 <li class="fragment appear">proper <code>/etc/</code> handling (👉️ <i class="fa-brands fa-github"></i> <a href="https://github.com/dcermak/bindicate"><code>dcermak/bindicate</code></a>)</li>
 <li class="fragment appear">better UX</li>
-<li class="fragment appear">proper kernel update handling</li>
-<li class="fragment appear">image builder support (👉️ <i class="fa-brands fa-github"></i> <a href="https://github.com/OSInside/kiwi/pull/2840"><code>OSInside/kiwi#2840</code></a>)</li>
+<li class="fragment appear">proper kernel &amp; bootloader update handling</li>
+<li class="fragment appear">real image builder support</li>
 <li class="fragment appear">finish support in <code>tukit</code></li>
+<li class="fragment appear">garbage collection</li>
 
 </ul>
 
