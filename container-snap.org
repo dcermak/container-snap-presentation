@@ -127,6 +127,22 @@ We all know how to build a container
 @@html:<video width="1066" height="600" controls><source src="media/container-snap-demo.mp4" type="video/mp4"></video>@@
 
 
+* Challenges
+
+#+ATTR_REVEAL: :frag (appear)
+@@html:<img src="./media/oops1.png"/>@@
+
+#+ATTR_REVEAL: :frag (appear)
+@@html:<img src="./media/oops2.png"/>@@
+
+#+ATTR_REVEAL: :frag (appear)
+@@html:<img src="./media/oops3.png"/>@@
+
+#+ATTR_REVEAL: :frag (appear)
+- long debug & test cycles
+- =tukit= is very [[https://github.com/openSUSE/snapper/][snapper]] & openSUSE specific
+- bootloaders are weird
+
 * What's left?
 
 #+ATTR_REVEAL: :frag (appear)
